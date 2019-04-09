@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Vanilla QuiZ</title>
+  </head>
+  <body>
+    <header>
+      <h1>Are you the <span>Quiz Master</span></h1>
+    </header>
+
+    <main>
+      <div class="time-wrapper">
+        <div class="timer">
+          <h1 id="timer"></h1>
+        </div>
+      </div>
+
+      <div class="load-wrapper">
+        <p>
+          Loading... <br />
+          "Patience is a Virtue"
+        </p>
+        <div class="load">
+          <div class="spinner">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
+          </div>
+        </div>
+      </div>
+
+      <form name="quiz-form" class="quiz-form">
+        <div class="quiz-options">
+          <p>Select a Difficulty Level:</p>
+          <select name="difficulty" id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
+        <div class="quiz-options">
+          <p>Select a Category:</p>
+          <select name="category" id="category">
+            <option value="Animals">Animals</option>
+            <option value="boardgame">Boardgame</option>
+            <option value="computer">Computer</option>
+            <option value="nature">Nature</option>
+          </select>
+        </div>
+        <div class="quiz-options">
+          <p>Enter the amount of questions (maximum of 20):</p>
+          <input
+            type="number"
+            min="1"
+            max="20"
+            name="quantity"
+            value="5"
+            required
+          />
+        </div>
+        <button class="button generate-button" type="submit">
+          Create Your Quiz
+        </button>
+      </form>
+      <form class="quiz-content">
+        <ul class="questions"></ul>
+      </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.13/dist/index.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
